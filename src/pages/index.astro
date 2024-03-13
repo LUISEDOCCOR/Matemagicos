@@ -1,9 +1,25 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro"
+import RecommendationCard from "../components/RecommendationCard.astro"
+
+//data
+import { recommendations } from "../data/recommendations"
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Matemágicos">
 	<Header/>
+	<main>
+		<section class="flex justify-between flex-wrap">
+			{
+				recommendations.map((recommendation) => (
+					<RecommendationCard 
+						name={recommendation.name}
+						stars={recommendation.stars}
+					/>
+				))
+			}
+		</section>
+	</main>
 </Layout>
 
