@@ -1,11 +1,12 @@
 ---
 import Nav from "../components/Nav.astro"
+import Header from "../components/Header.astro"
 import '@fontsource-variable/inter';
 const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="bg-[#D9D9D9]">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -14,10 +15,9 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="bg-[#D9D9D9]">
-		<header class="max-w-7xl mx-auto">
-			<Nav/>
-		</header>
+	<body class="max-w-7xl mx-auto">
+		<Nav/>
+		<Header/>
 		<main>
 			<slot/>
 		</main>
