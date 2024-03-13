@@ -1,8 +1,6 @@
 ---
-interface Props {
-	title: string;
-}
-
+import Nav from "../components/Nav.astro"
+import '@fontsource-variable/inter';
 const { title } = Astro.props;
 ---
 
@@ -16,8 +14,13 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
-		<slot />
+	<body class="bg-[#D9D9D9]">
+		<header class="max-w-7xl mx-auto">
+			<Nav/>
+		</header>
+		<main>
+			<slot/>
+		</main>
 	</body>
 </html>
 <style is:global>
@@ -33,9 +36,7 @@ const { title } = Astro.props;
 		);
 	}
 	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
+		font-family: "Inter Variable";
 	}
 	code {
 		font-family:
