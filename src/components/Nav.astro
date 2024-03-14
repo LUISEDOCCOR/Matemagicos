@@ -6,14 +6,14 @@ const pages = [
 ]
 ---
 
-<nav class="flex justify-between py-8">
+<nav class="flex justify-center sm:justify-between py-8 sm:px-12 lg:px-0">
     <div class="flex items-center justify-center gap-6">
         <svg class="w-7 h-7" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M17 1H10L6 15L3 9H1M12 9L18 15M12 15L18 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         <h1 class="text-xl font-semibold">Matemágicos</h1>
     </div>
-    <div class="space-x-8">
+    <div class="hidden sm:space-x-1 lg:space-x-8 sm:block">
         {
             pages.map((item) => (
                 <a href="/" 
