@@ -11,8 +11,11 @@ import { sections } from "../data/sections";
 
 <Layout title="Matemágicos">
 	<Header/>
-	<main class="mb-32">
-		<section class="flex justify-between flex-wrap mt-24">
+	<main class="mb-32 px-4 lg:px-0">
+		<section 
+		class="flex justify-center gap-6 lg:gap-0  
+		lg:justify-between flex-wrap mt-16 sm:mt-24
+		">
 			{
 				recommendations.map((recommendation) => (
 					<RecommendationCard 
@@ -22,7 +25,11 @@ import { sections } from "../data/sections";
 				))
 			}
 		</section>
-		<section class="mt-24 flex justify-between flex-wrap ">
+		<section 
+		class="mt-16 sm:mt-24 flex justify-center gap-6 lg:gap-0
+		 lg:justify-between flex-wrap 
+
+		">
 			{
 				sections.map((section) => (
 					<CardTheme 
