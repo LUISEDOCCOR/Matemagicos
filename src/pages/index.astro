@@ -2,20 +2,33 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro"
 import RecommendationCard from "../components/RecommendationCard.astro"
+import CardTheme from "../components/CardTheme.astro"
 
 //data
 import { recommendations } from "../data/recommendations"
+import { sections } from "../data/sections";
 ---
 
 <Layout title="Matemágicos">
 	<Header/>
-	<main>
-		<section class="flex justify-between flex-wrap">
+	<main class="mb-32">
+		<section class="flex justify-between flex-wrap mt-24">
 			{
 				recommendations.map((recommendation) => (
 					<RecommendationCard 
 						name={recommendation.name}
 						stars={recommendation.stars}
+					/>
+				))
+			}
+		</section>
+		<section class="mt-24 flex justify-between flex-wrap ">
+			{
+				sections.map((section) => (
+					<CardTheme 
+					title={section.title} 
+					content={section.content} 
+					cover_name={section.cover_name}
 					/>
 				))
 			}
